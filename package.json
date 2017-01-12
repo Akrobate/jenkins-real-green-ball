@@ -1,18 +1,30 @@
 {
   "name": "jenkins-real-green-ball",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "example",
+  "main": "dist/src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "$(npm bin)/tsc",
+    "test": "$(npm bin)/mocha \"dist/test/TestSuite.js\" --recursive",
+    "start": "$(npm bin)/tsc && node ./dist/src/app.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "LicenseRef-LICENSE",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "js-yaml": "3.7.0",
+    "winston": "2.3.0"
+  },
   "devDependencies": {
-    "chai": "3.5.0", 
+    "@types/chai": "3.4.34",
+    "@types/js-yaml": "3.5.29",
+    "@types/mocha": "2.2.35",
+    "@types/node": "6.0.55",
+    "@types/sinon": "1.16.34",
+    "chai": "3.5.0",
     "mocha": "3.2.0",
     "sinon": "1.17.7",
-    "tslint": "4.2.0", 
+    "tslint": "4.2.0",
     "typescript": "2.1.4"
   }
 }
