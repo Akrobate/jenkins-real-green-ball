@@ -5,15 +5,14 @@
   "main": "dist/src/app.js",
   "scripts": {
     "pretest": "$(npm bin)/tsc",
-    "test": "$(npm bin)/mocha \"dist/test/TestSuite.js\" --recursive",
+    "test": "$(npm bin)/mocha \"dist/test/**/*.test.js\" --recursive",
     "start": "$(npm bin)/tsc && node ./dist/src/app.js"
   },
   "author": "",
   "license": "LicenseRef-LICENSE",
   "dependencies": {
     "body-parser": "1.15.2",
-    "js-yaml": "3.7.0",
-    "winston": "2.3.0"
+    "js-yaml": "3.7.0"
   },
   "devDependencies": {
     "@types/chai": "3.4.34",

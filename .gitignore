@@ -1,5 +1,7 @@
 dist
 
+configuration.yaml
+
 # Logs
 logs
 *.log
