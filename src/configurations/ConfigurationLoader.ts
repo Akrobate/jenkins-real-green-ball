@@ -9,11 +9,12 @@ const configuration_filename = 'configuration.yaml'
 
 let raw_configuration = yml_parser.safeLoad(fs.readFileSync(process.cwd() + '/' + configuration_filename, 'utf8'))
 
-//console.log(raw_configuration)
+console.log(raw_configuration)
 
 let used_configuration = raw_configuration[environment_name]
 
 export let Configuration: Object = {
     jenkins_url: used_configuration.jenkins_url,
     jenkins_job_name: used_configuration.jenkins_job_name,
+    usb_infrared_device_path: used_configuration.usb_infrared_device_path,
 }

@@ -1,3 +1,14 @@
 local:
     jenkins_url: "https://username:token@jenkins.company.com"
     jenkins_job_name: "job name in jenkins"
+    usb_infrared_device_path: "/dev/tty"
+    # blue => green
+    jenkins_color_blue: "FFD827"
+    # notbuilt => blue
+    jenkins_color_notbuilt: "FF8877"
+    # red => red
+    jenkins_color_red: "FF9867"
+    # blue_anime => blue
+    jenkins_color_blue_anime: "FFD827"
+    # red_anime => blue
+    jenkins_color_red_anime: "FFD827"
