@@ -7,7 +7,9 @@ export class UsbInfraRedDevice {
     }
 
     public sendIrMessage(ir_message: string) {
-        let cmd = 'echo ' + ir_message + ' >> ' + this.device_path
+        // echo "Message test">/dev/ttyACM0
+        // echo $((16#FF00FF88)) > /dev/ttyACM0
+        let cmd = 'echo ""' + ir_message + '"" > ' + this.device_path
         console.log(cmd)
     }
 
