@@ -11,8 +11,11 @@
   "author": "",
   "license": "LicenseRef-LICENSE",
   "dependencies": {
+    "@types/chai": "^3.4.34",
     "body-parser": "1.15.2",
-    "js-yaml": "3.7.0"
+    "http": "0.0.0",
+    "js-yaml": "3.7.0",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "@types/chai": "3.4.34",
