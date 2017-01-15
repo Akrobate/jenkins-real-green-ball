@@ -1,4 +1,5 @@
 local:
+    refresh_timeout_seconds: 20
     jenkins_url: "https://username:token@jenkins.company.com"
     jenkins_job_name: "job name in jenkins"
     usb_infrared_device_path: "/dev/tty"
