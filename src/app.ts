@@ -2,7 +2,6 @@ import {Configuration} from './configurations/ConfigurationLoader';
 import {JenkinsClientApi} from './client_api/JenkinsClientApi';
 import {UsbInfraRedDevice} from './physical_device/UsbInfraRedDevice';
 
-console.log(Configuration)
 let config:any = Configuration
 let jenkins_client_api = new JenkinsClientApi( config.jenkins_url )
 let ir_device = new UsbInfraRedDevice()
@@ -11,7 +10,6 @@ ir_device.setDevicePath( config.usb_infrared_device_path )
 console.log("App ready, main loop starts")
 setInterval(() => {
     jenkins_client_api.getJobInfo(config.jenkins_job_name).then((data: any) => {
-        //console.log(data)
         console.log(data.color)
         let jenkins_color_name = 'jenkins_color_' + data.color
         // check jenkins color has ir message definition
